@@ -2,7 +2,7 @@ import {__g, __p, __u} from "../../sydneyDom_v2.js"
 
 import { initUser } from "./__init.js";
 
-const socketConnectionLink = "wss://compre-text.uc.r.appspot.com/";
+const socketConnectionLink = "wss://compre-text.onrender.com/";
 let ws;
 
 export const getSocket = () =>{
