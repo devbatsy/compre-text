@@ -1,0 +1,13 @@
+#signUpMain_right_main_design::-webkit-scrollbar-track
+{
+    display:none;
+}
+
+#signUpMain_right_main_design::-webkit-scrollbar , #signUpMain_right_main_design
+::-webkit-scrollbar
+{
+    width: 3px;
+    height: 80%;
+	background-color: transparent;
+	color:green;
+}

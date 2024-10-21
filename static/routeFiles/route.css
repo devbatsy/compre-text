@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    /* outline: 1px dashed; */
+}
+
+body{
+	/* max-height:100vh; */
+	/* overflow:hidden; */
+}
+
+@font-face {
+    font-family: ubuntu;
+    src: url('../Ubuntu/Ubuntu-Regular.ttf');
+}
+
+@font-face {
+    font-family: jose;
+    src: url(../Josefin_Sans/JosefinSans-VariableFont_wght.ttf);
+}
+
+::-webkit-scrollbar
+{
+    width: 0px;
+    height: 80%;
+	background-color: transparent;
+}
+::-webkit-scrollbar-track
+{
+    background:#d3d3d311;
+}
+p::-webkit-scrollbar-track
+{
+    background:transparent;
+}
+::-webkit-scrollbar-thumb
+{
+    background-color:#2f233034;
+    width: 3px;
+	border-radius: 20px;
+}
+::-webkit-scrollbar:hover ::-webkit-scrollbar-thumb{
+    width: 3px;
+}
+
+input , textarea{
+    border: unset;
+    outline: none;
+}
+input::placeholder{
+    font-weight: 700;
+    color: grey;
+}
+a{
+    text-decoration: unset;
+}
+.capitalize_first_letter::first-letter
+{
+    font-size: 28px;
+    /* color: #fce2be; */
+}
+
+i , .click{
+    transition: transform linear .3s;
+    cursor: pointer;
+    text-align: center;
+}
+i:active , .click:active , .hoverBtn:hover{
+    transform: scale(1.1);
+}
+
+.hoverBtn:hover
+{
+    transform: scale(1.05);
+}
+
+#google_translate_element select
+{
+    background: unset;
+    border: unset;
+    font-size: 14px;
+    font-family: ubuntu;
+    font-weight: 700;
+    color: grey;
+    outline: none;
+    width:100px;
+    background-color: #f9e0ba;
+    cursor: pointer;
+    padding: 10px;
+    /* transform:translateY(-50%) */
+}
+.selected_icon
+{
+    opacity: 1;
+}
+
+.not_selected_icon{
+    opacity: .5;
+}
+.dropDownEntryAnimation{
+    animation-name:dropDownEntryAnimation ;
+    animation-iteration-count: 1;
+    animation-duration: .2s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes dropDownEntryAnimation
+{
+    0%{
+        transform: translateY(20%);
+        opacity: .3;
+    }
+
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.hover_menu_icon
+{
+    padding:10px;
+    cursor: pointer;
+}
+.hover_menu_icon:hover{
+    background: lightgrey;
+}
+.text_hover:hover{
+    background: #dadada;
+    transition: background linear .2s;
+}
+.transition_sideProfile{
+    transition: transform linear .1s;
+}
+.nameError , .emailError , .passwordError{position: relative;}
+.nameError::after , .emailError::after , .passwordError::after
+{
+    width:100%;
+    left:0;
+    position:absolute;
+    top:calc(100% + 2px);
+    color:rgba(255, 0, 0, 0.608);
+    font-size:11px;
+    font-weight:700;
+    text-transform: capitalize;
+}
+.nameError::after
+{
+    content:"User name must exceed 5 characters";
+}
+
+.emailError::after
+{
+    content:"Email must contain the @ and a valid .(valid domain name)";
+}
+
+.passwordError::after
+{
+    content:"Password length must exceed 6 , have at least a word and a number";
+}
+
+
+.loader
+{
+    position: relative;
+}
+.loader .loader_elem2
+{
+    height:calc(80% - 5px);
+    width:calc(80% - 5px);
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    background: #8e5399;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    /* color:#ecebeb */
+}
+.loader .loader_elem1
+{
+    height:calc(80%);
+    width:calc(80%);
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    background: rgb(45, 26, 48);
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    animation: loader_anime; 
+    animation-timing-function:linear;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+}
+.loader .loader_elem1::after
+{
+    content: '';
+    height:50%;
+    width:100%;
+    position: absolute;
+    top:50%;
+    background:#CE8CA5;
+    border-radius: 50%;
+}
+@keyframes loader_anime
+{
+    0%{
+        transform: translateY(-50%) translateX(-50%) rotateZ(0deg);
+    }
+    100%{
+        transform: translateY(-50%) translateX(-50%) rotateZ(360deg);
+    }
+}
+
+.line_loader_child
+{
+    animation-name: l_loader;
+    animation-duration:1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes l_loader{
+    0%{
+        transform: translateX(0%) translateY(-50%);
+    }
+    50%{
+        transform: translateX(calc((1/0.3 * 100%) - 100%)) translateY(-50%);
+    }
+    100%{
+        transform: translateX(0) translateY(-50%);
+    }
+}

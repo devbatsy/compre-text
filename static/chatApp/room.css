@@ -1,0 +1,25 @@
+.room_icon_selected{
+    background: rgba(34, 20, 36, 0.2);
+    border-right: 2px solid #E2BE67;
+}
+.room_icon_tab_def
+{
+    border-right-width: 2px ;
+}
+.chatApp_tab_two_search_tab_desktop_input::placeholder{
+    opacity: .7;
+    font-weight: 500;
+}
+
+.chat_main_tab3_chat_text_message_tab_msg_box_input::placeholder
+{
+    opacity: .7;
+    font-weight: 300;
+}
+.tab_two_desktop_scroll_tab::-webkit-scrollbar
+{
+    width: 3px;
+    height: 80%;
+	background-color: transparent;
+    /* display: none; */
+}
