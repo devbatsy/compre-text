@@ -6,7 +6,7 @@ module.exports = () =>{
     const initObject = {};
     try{
         initObject['intialiseApp'] = initializeApp({
-            credential:cert(process.env.firebase),
+            credential:cert(JSON.parse(process.env.firebase)),
             // storageBucket:'gs://jet-computers.appspot.com'
         });
         initObject['fireStoreDB'] = getFirestore();
